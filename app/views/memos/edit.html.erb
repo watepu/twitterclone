@@ -1,0 +1,13 @@
+<h2>メモを書き換える</h2>
+
+<%= form_with(model: @memo, local: true, :class => 'memo_title') do |form| %>
+
+<div class="input_content">
+
+  <%= form.text_area :content, :class => 'content_form' %>
+  
+  <div>
+  <%= form.submit "書き換える", :class => "btn" %>
+  </div>
+<% end %>
+</div>

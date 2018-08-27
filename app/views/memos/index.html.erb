@@ -1,0 +1,15 @@
+<h2>メモ一覧</h2>
+
+
+
+<table>
+  <% @memos.each do |memo| %>
+    <tr>
+      <td><%= memo.content %></td>
+    </tr>
+    <tr>
+      <td><%= link_to "メモの書き換え", edit_memo_path(memo.id),class: "edit_btn" %></td>
+      <td><%= link_to "メモを捨てる", memo_path(memo.id),class: "delete_btn", method: :delete %></td>
+    </tr>
+  <% end %>
+</table>

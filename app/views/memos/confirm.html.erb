@@ -1,0 +1,11 @@
+<h2>このメモを保存して良いですか？</h2>
+
+<%= form_with(model: @memo, url: memos_path, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <div class="confirm_memo">
+  <%= @memo.content %>
+  </div>
+  <div class="confirm_submit_btn">
+  <%= form.submit "保存する", :class => "btn" %>
+  </div>
+<% end %>

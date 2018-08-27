@@ -1,0 +1,20 @@
+<dl id="accordion">
+  <dt>どういうもの？</dt>
+  <dd>ちょっとしたメモを簡単に残しておくためのアプリ</dd>
+  <dt>メモを書く</dt>
+  <dd>残しておきたいメモを書いて保存を押します</dd>
+  <dt>メモを見る</dt>
+  <dd>残しておいたメモを見ることができます</dd>
+  <dt>注意点</dt>
+  <dd>課題の性質上、140文字以下までしかメモに残せません</dd>
+</dl>
+
+<script>
+  $(function() {
+  $('#accordion dd').hide();
+  $('#accordion dt').click(function(){
+    $(this).next('dd').slideToggle()
+  })
+});
+</script>
+

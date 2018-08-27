@@ -1,0 +1,22 @@
+<h2>メモを書く</h2>
+<%= form_with(model: @memo, local: true, :class => 'memo_title', url: confirm_memos_path) do |form| %>
+  <% if @memo.errors.any? %>
+  <div class="error_explanation">
+    <h3 class="error_msg"><%= @memo.errors.count %>件のエラーがあります</h3>
+    <ul>
+      <% @memo.errors.full_messages.each do |msg| %>
+      <li class="error_msg"><%= msg %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
+<div class="input_content">
+
+  <%= form.text_area :content, :class => 'content_form' %>
+  
+  <div>
+  <%= form.submit "保存する", :class => "btn" %>
+  </div>
+<% end %>
+</div>
