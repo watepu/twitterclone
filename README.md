@@ -1,24 +1,20 @@
-# README
+# TwitterClone
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 概要
+DIVER phase2大課題にて作成したアプリです。  
+基本的なCRUD機能を実装しています。
 
-Things you may want to cover:
+## URL
+http://agile-scrubland-24969.herokuapp.com/
 
-* Ruby version
+## 開発環境
+* Ruby 2.5.0
+* Rails 5.1.6
+* PostgreSQL 10.5
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## 機能一覧
+* CRUD機能
+* 確認画面から投稿画面に戻った時、打ち込んだ内容を保持
+* つぶやきは1文字以上140文字以下に制限
+* 140文字より多い文字数、または空の場合、エラーメッセージ表示
+* アコーディオン機能を実装
